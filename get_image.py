@@ -23,7 +23,7 @@ def getImageUrl(search_item, total_num):
   i=i+10
  return img_list
  
-def getImage(img_list):
+def getImage(search_item, img_list):
  opener = urllib2.build_opener()
  http = httplib2.Http(".cache")
  for i in range(len(img_list)):
@@ -32,13 +32,13 @@ def getImage(img_list):
    print(fn, ext)
    response, content = http.request(img_list[i])
    print(response.status)
-   with open(str(i)+ext, 'wb') as f:
+   with open(search_item+str(i)+ext, 'wb') as f:
 	f.write(content)
   except:
    print("failed to download images.")
    continue
 
 if __name__ == "__main__":
- img_list = getImageUrl("犬", 15)
+ img_list = getImageUrl("犬", 5)
  print(img_list)
- getImage(img_list)
+ getImage("dog", img_list)
