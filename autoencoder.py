@@ -6,7 +6,6 @@ import pickle
 import cv2
 from scipy import stats
 
-import reader
 import reader2
 
 FILE_NAME = 'prototype_1/data_batch_'
