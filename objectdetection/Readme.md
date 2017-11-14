@@ -54,4 +54,6 @@ python object_detection/export_inference_graph.py
 
 `python detect.py`
 
+---
+
 Contact: onlyzs1023@gmail.com
