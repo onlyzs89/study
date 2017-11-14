@@ -39,7 +39,7 @@ with detection_graph.as_default():
 
     cap = cv.VideoCapture(0)
     
-    counter = 1
+    #counter = 1
     while True:
       _, frame = cap.read()
       image_np_expanded = np.expand_dims(frame, axis=0)
@@ -59,8 +59,8 @@ with detection_graph.as_default():
           min_score_thresh=.9)
 
       cv.imshow("detections", frame)
-      cv.imwrite("cap"+str(counter)+".jpg", frame)
-      counter+=1
+      #cv.imwrite("cap"+str(counter)+".jpg", frame)
+      #counter+=1
       
       if cv.waitKey(1) >= 0:
         break
