@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<annotation>
+  <filename>test_99.jpg</filename>
+  <size>
+    <width>600</width>
+    <height>400</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>140</xmin>
+      <ymin>55</ymin>
+      <xmax>538</xmax>
+      <ymax>333</ymax>
+    </bndbox>
+  </object>
+</annotation>
