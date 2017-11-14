@@ -17,7 +17,7 @@ Prerequisite:
 
 `python create_tf_record`
 
-## 4.Training
+## 4.Train
 
 ```
 python object_detection/train.py 
@@ -26,7 +26,7 @@ python object_detection/train.py
   --logtostderr
 ```
 
-## 5.Evaling
+## 5.Eval
 
 ```
 python object_detection/eval.py
