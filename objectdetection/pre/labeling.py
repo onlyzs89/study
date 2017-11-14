@@ -96,8 +96,16 @@ if __name__ == "__main__":
     cv2.namedWindow(fname)
     cv2.setMouseCallback(fname, bndBox.mouse_event)
     
+    # make dir if not existed
+    if not os.path.exists(ANNOTATION_DIR):
+      os.makedirs(ANNOTATION_DIR)
+      
+    xml_folder = os.path.join(ANNOTATION_DIR,"xmls")
+    if not os.path.exists(xml_folder):
+      os.makedirs(xml_folder)
+    
+    cv2.imshow(fname, img)
     while (True):
-      cv2.imshow(fname, img)
       if cv2.waitKey(1) & 0xFF == ord("n"):
         bndBox.save()
         trainval.append(fname+" "+"1")
