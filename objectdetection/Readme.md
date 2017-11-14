@@ -46,8 +46,8 @@ python object_detection/eval.py
 python object_detection/export_inference_graph.py
   --input_type image_tensor
   --pipeline_config_path ../../data/ssd_mobilenet_v1.config
-  --trained_checkpoint_prefix ../../data/train/model.ckpt-100000
-  --output_directory ../../data
+  --trained_checkpoint_prefix ../../data/train/model.ckpt
+  --output_directory ../../data/save
 ```
 
 ## 8.Use Model
