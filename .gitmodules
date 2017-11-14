@@ -1,0 +1,3 @@
+[submodule "objectdetection/models"]
+	path = objectdetection/models
+	url = https://github.com/tensorflow/models
