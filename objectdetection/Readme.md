@@ -4,7 +4,7 @@
 
 Prerequisite:
 - opencv-python
-- webカメラ
+- web camera
 
 ## 2.Labeling
 
