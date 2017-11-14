@@ -3,14 +3,14 @@ import cv2
 import argparse,os,sys
 
 IMAGE_DIR = "../data/images"
-NAME = "test" #ラベル名
+NAME = "test" # ラベル名
 
-inWidth = 500
-inHeight = 500
+inWidth = 600
+inHeight = 400
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
-  parser.add_argument("--video", help="Video File") #ビデオから写真をキャプチャする場合はパラメータを追加
+  parser.add_argument("--video", help="Video File") # ビデオから写真をキャプチャする場合はパラメータを追加
   args = parser.parse_args()
   
   if args.video is not None:
@@ -18,7 +18,13 @@ if __name__ == "__main__":
   else:
     cap = cv2.VideoCapture(0)
   
-  counter = 21
+  #fps = cap.get(cv2.CAP_PROP_FPS)
+  
+  # make dir if not existed
+  if not os.path.exists(IMAGE_DIR):
+    os.makedirs(IMAGE_DIR)
+  
+  counter = 1
   while True:
     _, frame = cap.read()
     if frame is not None:
@@ -33,3 +39,5 @@ if __name__ == "__main__":
         break
     else:
       sys.exit(0)
+    
+    
